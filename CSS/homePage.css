@@ -1,0 +1,70 @@
+body {
+margin: 0;
+font-family: Arial, sans-serif;
+}
+
+/* Header */
+
+header {
+display: flex;
+justify-content: space-between;
+align-items: center;
+
+padding: 20px;
+border-bottom: 1px solid black;
+}
+
+header h1 {
+margin: 0;
+font-size: 40px;
+font-weight: bold;
+}
+
+nav {
+display: flex;
+gap: 20px;
+}
+
+nav a {
+text-decoration: none;
+color: black;
+}
+
+/* Main body */
+
+main {
+display: flex;
+gap: 20px;
+
+padding: 20px;
+}
+
+/* Left and right sections */
+
+#left-section,
+#right-section {
+width: 20%;
+}
+
+/* Search bar */
+
+#left-section input {
+width: 100%;
+padding: 10px;
+box-sizing: border-box;
+}
+
+/* Middle section */
+
+#middle-section {
+width: 60%;
+padding: 20px;
+
+border-left: 1px solid black;
+border-right: 1px solid black;
+}
+
+#middle-section p {
+font-size: 18px;
+line-height: 1.6;
+}

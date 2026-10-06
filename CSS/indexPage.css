@@ -1,0 +1,19 @@
+body {
+  margin: 0;
+  min-height: 100vh;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#login-area {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 3px;
+  border: 1px solid #999;
+  border-radius: 12px;
+  box-shadow: 2px 2px;
+  background: linear-gradient(antiquewhite, peachpuff);
+}

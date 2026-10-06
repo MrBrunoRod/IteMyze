@@ -1,11 +1,35 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  
-</body>
+  <head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <link rel="stylesheet" href="CSS/indexPage.css"/>
+    <title>Sign In</title>
+  </head>
+  <body>
+    <div id="login-area">
+      <div id="image-area">
+        <marquee direction="up">
+          <img class="scrolling-image" src="/Images/boardGames.jpg" width="100px" /><br />
+          <img class="scrolling-image" src="/Images/cardGames.jpg" width="100px" /><br />
+          <img class="scrolling-image" src="/Images/videoGames.jpg" width="100px" /><br />
+        </marquee>
+      </div>
+      <form id="login-form" action="HTML/homePage.html" method="GET">
+        <div class="user-info">
+          <div>
+            <label for="userName">User Name</label><br />
+            <input name="userName" id="user-name" type="text" />
+          </div>
+          <div>
+            <label for="userPassword">Password</label><br />
+            <input name="userPassword" id="user-password" type="text" />
+          </div>
+        </div>
+        <div id="signin-button">
+          <input type="submit" value="Sign In" />
+        </div>
+      </form>
+    </div>
+  </body>
 </html>
