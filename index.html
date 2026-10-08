@@ -9,11 +9,18 @@
   <body>
     <div id="login-area">
       <div id="image-area">
-        <marquee direction="up">
-          <img class="scrolling-image" src="/Images/boardGames.jpg" width="100px" /><br />
-          <img class="scrolling-image" src="/Images/cardGames.jpg" width="100px" /><br />
-          <img class="scrolling-image" src="/Images/videoGames.jpg" width="100px" /><br />
-        </marquee>
+        <div class="image-track">
+          <div class="image-set">
+            <img src="/Images/boardGames.jpg" />
+            <img src="/Images/cardGames.jpg" />
+            <img src="/Images/videoGames.jpg" />
+          </div>
+          <div class="image-set">
+            <img src="/Images/boardGames.jpg" />
+            <img src="/Images/cardGames.jpg" />
+            <img src="/Images/videoGames.jpg" />
+          </div>
+        </div>
       </div>
       <form id="login-form" action="HTML/homePage.html" method="GET">
         <div class="user-info">
@@ -23,7 +30,7 @@
           </div>
           <div>
             <label for="userPassword">Password</label><br />
-            <input name="userPassword" id="user-password" type="text" />
+            <input name="userPassword" id="user-password" type="password" />
           </div>
         </div>
         <div id="signin-button">
