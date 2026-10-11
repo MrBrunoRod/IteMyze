@@ -13,6 +13,7 @@
 
 <body>
   <main id="login-area">
+
     <section id="image-area" aria-label="Game gallery">
       <div class="image-track">
         <div class="image-set">
@@ -28,21 +29,27 @@
         </div>
       </div>
     </section>
+
     <form id="login-form" action="HTML/homePage.html" method="GET">
+
       <fieldset class="user-info">
         <legend>Sign in to your account</legend>
+
         <div>
           <label for="user-name">User Name</label>
-          <input name="userName" id="user-name" type="text" autocomplete="username" />
+          <input name="userName" id="user-name" type="text" autocomplete="username"/>
         </div>
+
         <div>
           <label for="user-password">Password</label>
-          <input name="userPassword" id="user-password" type="password" autocomplete="current-password" />
+          <input name="userPassword" id="user-password" type="password" autocomplete="current-password"/>
         </div>
       </fieldset>
+
       <div id="signin-button">
         <input type="submit" value="Sign In" />
       </div>
+
     </form>
   </main>
 
@@ -63,5 +70,4 @@
     window.addEventListener("resize", updateScrollDistance);
   </script>
 </body>
-
 </html>
