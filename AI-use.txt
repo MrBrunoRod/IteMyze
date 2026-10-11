@@ -1,0 +1,4 @@
+We used Chat-GPT to identify the causes of visual errors such as the scrolling images animation
+not flowing seemlessly. It suggested using the temporary script found in index.html, however,
+that also does't seem to work properly so for now it will be left there, but it will eventually
+be replaced or fixed and moved into a proper javascript file.
