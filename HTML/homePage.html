@@ -3,34 +3,42 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="../CSS/homePage.css" />
-    <title>Home Page</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="/CSS/homePage.css" />
+    <title>IteMyze | Home</title>
   </head>
   <body>
     <header>
       <h1>IteMyze</h1>
-      <nav>
-        <a href="#">Profile</a>
-        <a href="#">Settings</a>
-        <a href="#">Log Out</a>
-      </nav>
     </header>
+
+    <nav aria-label="Main">
+      <a href="homePage.html" aria-current="page">Home</a>
+      <a href="addGames.html">Add Games</a>
+      <a href="profile.html">Profile</a>
+      <a href="settings.html">Settings</a>
+      <a href="../index.html">Log Out</a>
+    </nav>
+
     <main>
-      <section id="left-section">
-        <input type="text" placeholder="Search..." />
-      </section>
-      <section id="middle-section">
-        <p>
-          Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do
-          eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad
-          minim veniam, quis nostrud exercitation ullamco laboris nisi ut
-          aliquip ex ea commodo consequat. Duis aute irure dolor in
-          reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla
-          pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
-          culpa qui officia deserunt mollit anim id est laborum.
-        </p>
-      </section>
-      <section id="right-section"></section>
+      <div class="container">
+        <div class="row">
+          <aside id="left-section" class="col-12 col-md-3">
+            <input type="search" placeholder="Search..." aria-label="Search items" />
+          </aside>
+
+          <section id="middle-section" class="col-12 col-md-6">
+            <p>Lopado­temacho­selacho­galeo­kranio­leipsano­drim­hypo­trimmato
+              ­silphio­karabo­melito­katakechy­meno­kichl­epi­kossypho­phatto­pe
+              rister­alektryon­opte­kephallio­kigklo­peleio­lagoio­siraio­baph
+              e­tragano­pterygon</p>
+          </section>
+        </div>
+      </div>
     </main>
+
+    <footer>
+      <p>&copy; 2026 IteMyze</p>
+    </footer>
   </body>
 </html>

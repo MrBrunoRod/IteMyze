@@ -1,70 +1,85 @@
+/* ---------- Base ---------- */
+
 body {
-margin: 0;
-font-family: Arial, sans-serif;
+  font-family: Arial, sans-serif;
+  color: black;
+  background: white;
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
-/* Header */
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ---------- Header ---------- */
 
 header {
-display: flex;
-justify-content: space-between;
-align-items: center;
-
-padding: 20px;
-border-bottom: 1px solid black;
+  padding: 20px;
 }
 
 header h1 {
-margin: 0;
-font-size: 40px;
-font-weight: bold;
+  margin: 0;
+  font-size: 40px;
+  font-weight: bold;
 }
 
+/* ---------- Navigation ---------- */
+
 nav {
-display: flex;
-gap: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 10px 20px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
 }
 
 nav a {
-text-decoration: none;
-color: black;
+  text-decoration: none;
+  color: black;
 }
 
-/* Main body */
+nav a:hover,
+nav a[aria-current="page"] {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/* ---------- Main ---------- */
 
 main {
-display: flex;
-gap: 20px;
-
-padding: 20px;
+  flex: 1;
+  padding: 20px 0;
 }
 
-/* Left and right sections */
-
-#left-section,
-#right-section {
-width: 20%;
-}
-
-/* Search bar */
+/* ---------- Home page ---------- */
 
 #left-section input {
-width: 100%;
-padding: 10px;
-box-sizing: border-box;
-}
-
-/* Middle section */
-
-#middle-section {
-width: 60%;
-padding: 20px;
-
-border-left: 1px solid black;
-border-right: 1px solid black;
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
 }
 
 #middle-section p {
-font-size: 18px;
-line-height: 1.6;
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+/* Side borders only when the columns sit side by side */
+@media (min-width: 768px) {
+  #middle-section {
+    border-left: 1px solid black;
+  }
+}
+
+/* ---------- Footer ---------- */
+
+footer {
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid black;
 }
