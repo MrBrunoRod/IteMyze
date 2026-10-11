@@ -1,6 +1,9 @@
 <!doctype html>
 <html lang="en">
 
+<!-- We kept the index.html file outside of the HTML file because we want to use GitHub to host 
+  the website and keeping the file in the root is a necessary step-->
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -24,16 +27,17 @@
           <img src="/Images/videoGames.jpg" alt="" />
         </div>
       </div>
-      <form id="login-form" action="HTML/homePage.html" method="GET">
-        <div class="user-info">
-          <div>
-            <label for="userName">User Name</label><br />
-            <input name="userName" id="user-name" type="text" />
-          </div>
-          <div>
-            <label for="userPassword">Password</label><br />
-            <input name="userPassword" id="user-password" type="password" />
-          </div>
+    </section>
+    <form id="login-form" action="HTML/homePage.html" method="GET">
+      <fieldset class="user-info">
+        <legend>Sign in to your account</legend>
+        <div>
+          <label for="user-name">User Name</label>
+          <input name="userName" id="user-name" type="text" autocomplete="username" />
+        </div>
+        <div>
+          <label for="user-password">Password</label>
+          <input name="userPassword" id="user-password" type="password" autocomplete="current-password" />
         </div>
       </fieldset>
       <div id="signin-button">
