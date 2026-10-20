@@ -1,13 +1,150 @@
-/* Base / Desktop */
+/* ---------- Body ---------- */
 
-* {
+body:not(.index-page) {
+  font-family: Arial, sans-serif;
+  color: black;
+  background: white;
+
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+/* ---------- Header ---------- */
+
+header {
+  padding: 20px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 40px;
+  font-weight: bold;
+}
+
+/* ---------- Navigation ---------- */
+
+nav {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+  padding: 10px 20px;
+  border-top: 1px solid black;
+  border-bottom: 1px solid black;
+}
+
+nav a {
+  text-decoration: none;
+  color: black;
+}
+
+nav a:hover,
+nav a[aria-current="page"] {
+  text-decoration: underline;
+  font-weight: bold;
+}
+
+/* ---------- Main ---------- */
+
+main {
+  flex: 1;
+  padding: 20px 0;
+}
+
+/* ---------- Footer ---------- */
+
+footer {
+  padding: 20px;
+  text-align: center;
+  border-top: 1px solid black;
+}
+
+
+/* ---------- Home Page ---------- */
+
+#left-section input {
+  width: 100%;
+  padding: 10px;
   box-sizing: border-box;
 }
 
-body {
+#middle-section p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+
+/* ---------- Profile Page ---------- */
+
+#profile-section h2 {
+  margin-top: 0;
+}
+
+#profile-section p {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+
+/* ---------- Settings Page ---------- */
+
+#settings-section h2 {
+  margin-top: 0;
+}
+
+#settings-section form {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+#settings-section label {
+  font-size: 18px;
+  line-height: 1.6;
+}
+
+#settings-section input[type="text"],
+#settings-section input[type="email"],
+#settings-section select {
+  width: 100%;
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+#settings-section button {
+  padding: 10px;
+  box-sizing: border-box;
+}
+
+
+/* ---------- Side Boarders ---------- */
+
+@media (min-width: 768px) {
+  #middle-section,
+  #profile-section,
+  #settings-section {
+    border-left: 1px solid black;
+  }
+}
+
+
+/* ---------- Index Page ---------- */
+
+.index-page,
+.index-page * {
+  box-sizing: border-box;
+}
+
+body.index-page {
   margin: 0;
   min-height: 100vh;
   display: flex;
+  flex-direction: row;
   justify-content: center;
   align-items: center;
   background-color: rgb(98, 94, 122);
@@ -38,7 +175,6 @@ body {
   overflow: hidden;
   border-radius: 12px;
 }
-
 
 .image-track {
   width: 100%;
@@ -86,8 +222,6 @@ body {
     height: 680px;
   }
 
-  ;
-
   #login-form {
     padding: 60px;
   }
@@ -96,7 +230,7 @@ body {
 /* Tablet */
 
 @media (max-width: 900px) {
-  body {
+  body.index-page {
     padding: 15px;
   }
 
@@ -131,7 +265,7 @@ body {
 /* Phone */
 
 @media (max-width: 600px) {
-  body {
+  body.index-page {
     padding: 10px;
     align-items: flex-start;
   }
