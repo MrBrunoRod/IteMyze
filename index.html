@@ -38,12 +38,12 @@
 
         <div>
           <label for="user-name">User Name</label>
-          <input name="userName" id="user-name" type="text" autocomplete="username"/>
+          <input name="userName" id="user-name" type="text" autocomplete="username" required/>
         </div>
 
         <div>
           <label for="user-password">Password</label>
-          <input name="userPassword" id="user-password" type="password" autocomplete="current-password"/>
+          <input name="userPassword" id="user-password" type="password" autocomplete="current-password" required/>
         </div>
       </fieldset>
 
@@ -53,22 +53,5 @@
 
     </form>
   </main>
-
-  <script>
-    const imageTrack = document.querySelector(".image-track");
-    const imageSet = document.querySelector(".image-set");
-
-    function updateScrollDistance() {
-      const distance = imageSet.offsetHeight;
-
-      imageTrack.style.setProperty(
-        "--scroll-distance",
-        `${distance}px`
-      );
-    }
-
-    window.addEventListener("load", updateScrollDistance);
-    window.addEventListener("resize", updateScrollDistance);
-  </script>
 </body>
 </html>

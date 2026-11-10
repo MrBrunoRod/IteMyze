@@ -6,6 +6,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../CSS/styles.css" />
     <title>IteMyze | Settings</title>
+    <script src="../JavaScript/theme.js" defer></script>
     <script src="../JavaScript/settingPage.js" defer></script>
   </head>
   <body>
@@ -27,11 +28,8 @@
           <section id="settings-section" class="col-12 col-md-6">
             <h2>Settings</h2>
             <form>
-              <label for="user-name">Username</label>
-              <input type="text" id="user-name" name="user-name" />
-
-              <label for="password">Password</label>
-              <input type="text" id="password" name="password" />
+              <label for="user-name">Display name</label>
+              <input type="text" id="user-name" name="user-name" placeholder="Leave blank to use your login name"/>
 
               <label for="theme">Theme</label>
               <select id="theme" name="theme">
@@ -40,6 +38,8 @@
               </select>
 
               <button type="submit">Save</button>
+
+              <p id="setting-message" aria-live="polite"></p>
             </form>
           </section>
         </div>

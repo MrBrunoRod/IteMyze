@@ -1,18 +1,32 @@
 const settingsForm = document.querySelector("#settings-section form");
-
 const usernameInput = document.querySelector("#user-name");
-const passwordInput = document.querySelector("#password");
+const themeSelect = document.querySelector("#theme");
+const statusMessage = document.querySelector("#settings-message");
 
-// Load the saved values when the page opens
-usernameInput.value = localStorage.getItem("username") || "";
-passwordInput.value = localStorage.getItem("password") || "";
+function loadSettings() {
+  // Load the saved values when the page opens
+  usernameInput.value = localStorage.getItem("username") || "";
+  themeSelect.value = localStorage.getItem("theme") || "Light";
+}
 
 // Save the values when the form is submitted
-settingsForm.addEventListener("submit", function (event) {
+function saveSettings(event) {
   event.preventDefault();
 
-  localStorage.setItem("username", usernameInput.value);
-  localStorage.setItem("password", passwordInput.value);
+  const username = usernameInput.value.trim();
 
-  alert("Settings saved!");
-});
+  if (username === "") {
+    localStorage.removeItem("username");
+  }
+  else {
+    localStorage.setItem("username", username);
+  }
+
+  localStorage.setItem("theme", themeSelect.value);
+  applyTheme(themeSelect.value);
+
+  statusMessage.textContent = "Settings saved!"
+}
+
+loadSettings();
+settingsForm.addEventListener("submit", saveSettings);

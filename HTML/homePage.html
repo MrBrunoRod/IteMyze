@@ -6,6 +6,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../CSS/styles.css" />
     <title>IteMyze | Home</title>
+    <script src="../JavaScript/theme.js" defer></script>
+    <script src="../JavaScript/game.js" defer></script>    
+    <script src="../JavaScript/homePage.js" defer></script>
   </head>
   <body>
     <header>
@@ -22,23 +25,53 @@
 
     <main>
       <div class="container">
-        <div class="row">
-          <aside id="left-section" class="col-12 col-md-3">
-            <input type="search" placeholder="Search..." aria-label="Search items" />
-          </aside>
+        <section id="search-section" aria-label="Search and filter games">
+          <form id="filter-form" role="search">
+            <div class="search-row">
+              <label for="game-search" class="visually-hidden">Search games by name</label>
+              <input type="search" id="game-search" placeholder="Search games..."/>
 
-          <section id="middle-section" class="col-12 col-md-6">
-            <p>Lopado­temacho­selacho­galeo­kranio­leipsano­drim­hypo­trimmato
-              ­silphio­karabo­melito­katakechy­meno­kichl­epi­kossypho­phatto­pe
-              rister­alektryon­opte­kephallio­kigklo­peleio­lagoio­siraio­baph
-              e­tragano­pterygon</p>
-          </section>
-        </div>
+              <button type="button" id="filter-toggle" aria-expanded="false" aria-controls="filter-panel">
+                Filters ▾
+              </button>
+
+              <button type="submit">Apply</button>
+            </div>
+
+            <div id="filter-panel" hidden>
+              <div class="filter-option">
+                <label for="genre-filter">Genre</label>
+                <select id="genre-filter">
+                  <option value="all">All genres</option>
+                </select>
+              </div>
+
+              <div class="filter-option">
+                <label for="year-filter">Released: <span id="year-value"></span></label>
+                <input type="range" id="year-filter"/>
+              </div>
+
+              <div class="filter-option">
+                <label for="developer-search">Developer</label>
+                <input type="text" id="developer-search" placeholder="e.g. Riot Games" />
+              </div>
+            </div>
+          </form>
+        </section>
+
+        <section id="results-section">
+          <h2>Browse Games</h2>
+          <p id="results-message" aria-live="polite"></p>
+          <div id="game-results" class="game-grid"></div>
+          <button type="button" id="show-more" hidden>Show more</button>
+        </section>
+
       </div>
     </main>
 
     <footer>
       <p>&copy; 2026 IteMyze</p>
+      <p>Game data provided by <a href="https://www.freetogame.com" target="_blank" rel="noopener">FreeToGame</a></p>
     </footer>
   </body>
 </html>

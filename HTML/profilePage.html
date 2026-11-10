@@ -6,6 +6,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="../CSS/styles.css" />
     <title>IteMyze | Profile</title>
+    <script src="../JavaScript/theme.js" defer></script>
+    <script src="../JavaScript/game.js" defer></script>
+    <script src="../JavaScript/profilePage.js" defer></script>
   </head>
   <body>
     <header>
@@ -26,9 +29,12 @@
           <section id="profile-section" class="col-12 col-md-6 offset-md-3">
             <h2>Profile</h2>
 
-            <p><strong>Username:</strong> Player One</p>
-            <p><strong>Password:</strong> password123</p>
-            <p><strong>Games in collection:</strong> 0</p>
+            <p><strong>Username:</strong> <span id="profile-username"></span></p>
+            <p>
+              <strong>Password:</strong> <span id="profile-password"></span>
+              <button type="button" id="password-toggle" aria-pressed="false">Show</button>
+            </p>
+            <p><strong>Games in collection:</strong> <span id="profile-game-count">0</span></p>
 
             <h3>About</h3>
             <p>

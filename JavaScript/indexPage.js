@@ -21,6 +21,8 @@ loginForm.addEventListener("submit", async (event) => {
     });
 
     if (validAccount) {
+      sessionStorage.setItem("currentUser", nameInput.value);
+      sessionStorage.setItem("currentPassword", passwordInput.value);
       window.location.href = "HTML/homePage.html";
     } else {
       alert("Invalid username or password. Try again.");
