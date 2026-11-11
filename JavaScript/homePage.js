@@ -93,7 +93,7 @@ function addGame(game) {
 }
 
 function markAsAdded(button) {
-    button.textContent = "In collcetion";
+    button.textContent = "In collection";
     button.disabled = true;
     button.classList.add("added");
 }
